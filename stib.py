@@ -33,7 +33,4 @@ print station_led
 leds = leds_from_stations(stations)
 print leds
 
-#import r as display
-#while True: display.cycle(leds, 3,3)
-
 
