@@ -8,6 +8,7 @@ while True:
     print "updating"
     display.ledall()
     stations = stib.get_stations()
+    print [k for k,v in stations.iteritems() if v]
     leds = stib.leds_from_stations(stations)
     start = time()
 
