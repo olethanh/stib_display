@@ -25,12 +25,13 @@ def get_stations():
 def leds_from_stations(r):
     return [station_led.index(k) for k,v in r.iteritems() if v and k in station_led]
 
-stations = get_stations()
+if __name__ == "__main__":
+    stations = get_stations()
 
-print [k for k,v in stations.iteritems() if v]
-print station_led
+    print [k for k,v in stations.iteritems() if v]
+    print station_led
 
-leds = leds_from_stations(stations)
-print leds
+    leds = leds_from_stations(stations)
+    print leds
 
 
