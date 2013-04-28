@@ -29,6 +29,10 @@ def reset():
     for i in ins: off(i)
     for o in outs: on(o)
 
+def ledall():
+    for i in ins: on(i)
+    for o in outs: off(o)
+
 def led(i):
     on(leds_list[i][0])
     off(leds_list[i][1])
@@ -39,9 +43,9 @@ def ledoff(i):
 
 def cycle(leds, rows, cols):
     for r in range(rows):
+        reset()
         for u in range(r*cols, (r+1)*cols):
             if u in leds:
                 led(u)
         sleep(10.0/1000)
-        reset()
 
